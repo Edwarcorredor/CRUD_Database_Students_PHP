@@ -16,11 +16,8 @@ const postCampers = async(data)=>{ //funcion para agregar un Campers nuevo al js
 
 const deleteCampers = async(data)=>{ //funcion para eliminar un Campers del json-server usando su id
     config.method = "DELETE";
-    console.log(data)
-    let id = parseInt(data.idCamper)
-    config.body = JSON.stringify(id);
+    config.body = JSON.stringify(data);
     let res = await ( await fetch(`http://localhost/ApolT01-019/Filtro/uploads/campers`,config)).text();
-    console.log(res)
 
 }
 
