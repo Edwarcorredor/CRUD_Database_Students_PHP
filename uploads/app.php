@@ -44,7 +44,7 @@
     $router->delete("/campers", function(){
         $_DATA = json_decode(file_get_contents("php://input"), true);
         $cox = new \App\connect();
-        $res = $cox->con->prepare("DELETE FROM campers WHERE id = :ID");
+        $res = $cox->con->prepare("DELETE FROM campers WHERE idCamper = :idCamper");
         $res->bindParam("idCamper", $_DATA['idCamper']);
         $res->execute();
         $res = $res->rowCount();

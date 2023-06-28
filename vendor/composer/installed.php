@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'apolt01-019/filtro',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '9062067ec02cce6443c8073edab2190e6e554d43',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'apolt01-019/filtro' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '9062067ec02cce6443c8073edab2190e6e554d43',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

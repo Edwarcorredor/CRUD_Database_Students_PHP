@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="admin-site/style.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 	<script src="admin-site/main.js" async></script>
-	<script src="admin-site/app.js" defer type="module"></script>
+	<script src="admin-site/admin.js" defer type="module"></script>
 	<title>AdminSite</title>
 </head>
 <body>
@@ -18,11 +18,7 @@
 			<li><a href="#" class="active"><i class='bx bxs-dashboard icon' ></i> Dashboard</a></li>
 			<li class="divider" data-text="main">Main</li>
 			<li>
-				<a href="#" class="text-decoration-none"><i class='bx bxs-inbox icon' ></i> Tabla <i class='bx bx-chevron-right icon-right' ></i></a>
-				<ul class="side-dropdown">
-					<li><a href="#" class="link_tablas text-decoration-none">academic_area</a></li>
-
-				</ul>
+				<a href="index.html" class="text-decoration-none">Tabla</a>
 			</li>
 		</ul> 
 
@@ -66,10 +62,10 @@
 						<h3>Información</h3>
 					</div>
 					<div id="contenido">
-                        <form>
+                        <form id="formulario">
                             <div class="form-group mb-3">
                                 <label for="idCamper" class="form-label">id Camper:</label>
-                                <input type="numer" class="form-control" name="idCamper" min="0">
+                                <input type="number" class="form-control" name="idCamper">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="nombreCamper" class="form-label">Nombre Camper:</label>
@@ -83,10 +79,14 @@
                                 <label for="fechaNac" class="form-label">Fecha de Nacimiento:</label>
                                 <input type="date" class="form-control" name="fechaNac">
                             </div>
-                            <input type="submit" class="btn btn-primary" value="Crear">
-                            <input type="submit" class="btn btn-success"  value="Leer">
-                            <input type="submit" class="btn btn-info"  value="Actualizar">
-                            <input type="submit" class="btn btn-danger"  value="Eliminar">
+                            <div class="form-group mb-3">
+                                <label for="idReg" class="form-label">id Region:</label>
+                                <input type="number" class="form-control" name="idReg">
+                            </div>
+                            <input type="submit" class="btn btn-primary" value="Crear" data-accion="POST">
+                            <input type="submit" class="btn btn-success"  value="Leer" data-accion="GET">
+                            <input type="submit" class="btn btn-info"  value="Actualizar" data-accion="PUT">
+                            <input type="submit" class="btn btn-danger"  value="Eliminar" data-accion="DELETE">
                         </form>
 					</div>
 				</div>
