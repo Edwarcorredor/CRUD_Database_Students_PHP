@@ -1,7 +1,5 @@
 
-
-let link_tablas = document.querySelectorAll(".link_tablas");
-let contenidoHtml = document.querySelector("#contenido")
+let contenidoHtml = document.querySelector("#bodytabla")
 
 let config = { //Inicializo la configuracion de comunicacion 
     headers:new Headers({
@@ -9,24 +7,23 @@ let config = { //Inicializo la configuracion de comunicacion
     }),
 };
 
-const getAll = async(nombreTabla)=>{ 
+const getAll = async()=>{ 
     config.method = "GET";
-    let response= await fetch(`http://localhost/PDOnew/uploads/${nombreTabla}`,config);
+    let response= await fetch("http://localhost/ApolT01-019/Filtro/uploads/campers",config);
     let datosTabla = await response.json();
-    return datosTabla;
+    let tabla = '';
+    datosTabla.forEach(element => {
+        tabla += `
+        <tr>
+            <td>${element.idCamper}</td>
+            <td>${element.nombreCamper}</td>
+            <td>${element.apellidoCamper}</td>
+            <td>${element.fechaNac}</td>
+            <td>${element.idReg}</td>
+        </tr>`
+    });
+    contenidoHtml.innerHTML = tabla;
 
 }
 
-
-link_tablas.forEach(async tabla => {
-    tabla.addEventListener('click', async (e) => {
-        e.preventDefault();
-        contenidoHtml.innerHTML = '';
-        let datosTabla = await getAll(tabla.textContent);
-        let tableCampus = new TableCampus(datosTabla,tabla.textContent);
-        contenidoHtml.appendChild(tableCampus);
-
-    });
-});
-
-
+getAll();

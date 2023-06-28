@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -66,20 +66,28 @@
 						<h3>Información</h3>
 					</div>
 					<div id="contenido">
-						<table class="table">
-							<thead>
-								<tr>
-									<th scope="col">idCamper</th>
-									<th scope="col">nombreCamper</th>
-									<th scope="col">apellidoCamper</th>
-									<th scope="col">fechaNacimiento</th>
-									<th scope="col">idRegion</th>
-								</tr>
-							</thead>
-							<tbody id="bodytabla">
-								
-							</tbody>
-						</table>
+                        <form>
+                            <div class="form-group mb-3">
+                                <label for="idCamper" class="form-label">id Camper:</label>
+                                <input type="numer" class="form-control" name="idCamper" min="0">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="nombreCamper" class="form-label">Nombre Camper:</label>
+                                <input type="text" class="form-control" name="nombreCamper">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="apellidoCamper" class="form-label">Apellido Camper:</label>
+                                <input type="text" class="form-control" name="apellidoCamper">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="fechaNac" class="form-label">Fecha de Nacimiento:</label>
+                                <input type="date" class="form-control" name="fechaNac">
+                            </div>
+                            <input type="submit" class="btn btn-primary" value="Crear">
+                            <input type="submit" class="btn btn-success"  value="Leer">
+                            <input type="submit" class="btn btn-info"  value="Actualizar">
+                            <input type="submit" class="btn btn-danger"  value="Eliminar">
+                        </form>
 					</div>
 				</div>
 			</div>
